@@ -1,0 +1,225 @@
+$colorBackground: #010101;
+$colorText: #FFFFFF;
+$colorBackgroundItem: rgba(255, 255, 255, 0.3);
+$colorBackgroundItemProgress: #FFFFFF;
+$colorMarker: #C4C4C4;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: $colorText;
+}
+
+.container {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.portfolio {
+    background-color: $colorBackground;
+    padding: 100px 0;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 50px;
+        align-items: center;
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 75px;
+        line-height: 75px;
+        margin-bottom: 65px;
+    }
+
+    &__picture {
+        width: 100%;
+        border-radius: 7px;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 163%;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(360deg, #6A595B -21.87%, rgba(131, 104, 107, 0) 45.4%);
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        left: 0;
+        top: 0;
+    }
+
+    &__text {
+        z-index: 1;
+        max-width: 360px;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 35px;
+        position: absolute;
+        left: 50px;
+        bottom: 83px;
+
+        &::before {
+            content: '“';
+            position: absolute;
+            top: 0;
+            left: -15px;
+        }
+    }
+}
+
+.data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 28px;
+    margin-bottom: 45px;
+
+    &__picture {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 7px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 25px;
+        opacity: .6;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
+.tech {
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 25px;
+        margin-bottom: 15px;
+    }
+
+    &__wrap {
+        margin-bottom: 17px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 25px;
+        opacity: .8;
+        margin-bottom: 1px;
+    }
+
+    &__item {
+        width: 100%;
+        height: 7px;
+        border-radius: 10px;
+        background-color: $colorBackgroundItem;
+    }
+
+    &__progress {
+        height: 100%;
+        border-radius: inherit;
+        background-color: $colorBackgroundItemProgress;
+
+        &-internet {
+            width: 60%;
+        }
+
+        &-social {
+            width: 20%;
+        }
+
+        &-shopping {
+            width: 40%;
+        }
+    }
+}
+
+.info {
+    margin-bottom: 45px;
+
+    &:first-of-type {
+        margin-bottom: 50px;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 25px;
+        opacity: 0.9;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 25px;
+        opacity: 0.8;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 15px;
+        margin-bottom: 10px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $colorMarker;
+            position: absolute;
+            top: 12.5px;
+            left: 5px;
+            transform: translateY(-50%);
+        }
+    }
+}
