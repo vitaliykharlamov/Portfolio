@@ -16,7 +16,13 @@
 
 .portfolio {
   background-color: #010101;
-  padding: 100px 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .portfolio__container {
@@ -49,7 +55,7 @@
   content: '';
   display: block;
   width: 100%;
-  padding-top: 163%;
+  padding-top: 165%;
 }
 
 .portfolio__picture::after {
@@ -82,6 +88,7 @@
   position: absolute;
   left: 50px;
   bottom: 83px;
+  padding-right: 15px;
 }
 
 .portfolio__text::before {

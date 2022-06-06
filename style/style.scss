@@ -20,7 +20,9 @@ $colorMarker: #C4C4C4;
 
 .portfolio {
     background-color: $colorBackground;
-    padding: 100px 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 
     &__container {
         display: grid;
@@ -46,7 +48,7 @@ $colorMarker: #C4C4C4;
             content: '';
             display: block;
             width: 100%;
-            padding-top: 163%;
+            padding-top: 165%;
         }
 
         &::after {
@@ -78,6 +80,7 @@ $colorMarker: #C4C4C4;
         position: absolute;
         left: 50px;
         bottom: 83px;
+        padding-right: 15px;
 
         &::before {
             content: '“';
